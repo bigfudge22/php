@@ -1,0 +1,11 @@
+iframe.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bg-image{ 
+     style="background-image: url('https://mdbootstrap.com/img/new/standard/city/041.jpg');
+            height: 100vh;
+            z-index: -1
+            !important
+}
