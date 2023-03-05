@@ -6,36 +6,33 @@
 </head>
 
 <body>
-	<?php include 'login copy.php';?>
-		<?php
+	
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "mysql1234";
+$dbname = "Quests";
 
-		// servername => localhost
-		// username => root
-		// password => empty
-		// database name => staff
-		$conn = mysqli_connect("localhost", "root", "mysql1234", "Quests");
-		
-		// Check connection
-		if($conn === false){
-			die("ERROR: Could not connect. "
-				. mysqli_connect_error());
-		}
-		
-		// Taking all 5 values from the form data(input)
-		$Name = $_REQUEST['Name'];
-		$phone = $_REQUEST['phone'];
-		
-		
-		// Performing insert query execution
-		// here our table name is college
-		$sql = "INSERT INTO Quests VALUES (null,'$Name',
-			'$phone')";
-		
-		
-		
-		// Close connection
-		mysqli_close($conn);
-		?>
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+// prepare and bind
+$stmt = $conn->prepare("INSERT INTO MyGuests (Qid, Qname,Qnum) VALUES (?, ?, ?)");
+$stmt->bind_param("sss", $Qid, $Qnmae, $Qnum);
+
+// set parameters and execute
+$Qid = null;
+$Qname = $Name;
+$Qnum =$phone ;
+$stmt->execute();
+
+
+?>
 	
 </body>
 
