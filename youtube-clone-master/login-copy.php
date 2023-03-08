@@ -16,6 +16,7 @@
    
     session_start();
     $succesful =0 ;
+
     // When form submitted, check and create user session.
     if (isset($_POST['username'])) {
         $username = stripslashes($_REQUEST['username']);    // removes backslashes
@@ -30,7 +31,8 @@
         $result = mysqli_query($con, $query) or die(mysql_error());
         $rows = mysqli_num_rows($result);
         if ($rows >0) {
-            $_SESSION['username'] = $username;
+            $_SESSION["username"] = $username;
+            $_SESSION["login"] =1;
             // Redirect to user dashboard page
             header("Location: index.php");
         } else {

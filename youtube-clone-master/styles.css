@@ -29,7 +29,7 @@
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 2.8rem;
     color: rgb(7, 7, 7);
 }
 
@@ -63,11 +63,11 @@ hr {
     top: 0;
     left: 0;
     width: 100%;
-    background-color:#ecf0f3;
+    background-color:#b6b0b6;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 25px;
+    padding: 15px 10px;
     padding-right: 40px;
 }
 
@@ -178,6 +178,7 @@ img {
     height: calc( 100vh - 60px);
     top: 60px;
     background-color: #ecf0f3;
+    border: 1p;
 }
 
 
@@ -186,16 +187,38 @@ img {
 .sidebar {
     padding-top: 10px;
     width: 240px;
-    background-color: #ecf0f3;
+   
     overflow-y: scroll;
-    color: #fff;
+    color:#080608;
 }
 
 .sidebar-items {
     display: flex;
     flex-direction: column;
+    color: #080608;
 }
-
+.sidebar a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  .dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+  }
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
 .sidebar-item {
     display: flex;
     align-items: center;
@@ -205,9 +228,8 @@ img {
 }
 
 .sidebar-item:hover {
-    background-color: #4C4C4C;
+    background-color: #f4efef !important
 }
-
 .sidebar-item i {
     margin-right: 24px;
 }
