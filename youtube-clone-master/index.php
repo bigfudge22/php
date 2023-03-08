@@ -20,7 +20,7 @@
     
     $_SESSION["username"] =$username;
      if(!$_SESSION["login"]) {
-         $url="http://localhost:8888/login-copy.php";             
+         $url="http://localhost:8888/youtube-clone-master/login-copy.php";             
         
               
            } else{
